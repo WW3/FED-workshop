@@ -1,0 +1,106 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+.body {
+  padding: 1rem;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  margin-top: 2rem;
+}
+.slides-wrp {
+  width: 1000px;
+  height: 200px;
+  margin: 1rem auto;
+  position: relative;
+}
+.button {
+  background-color: maroon;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  width: 3rem;
+  display: block;
+  height: 3rem;
+  top: calc(100px - 1.5rem);
+}
+.button.disabled {
+  background-color: #f1f1f1;
+  border: none;
+  color: #000;
+  pointer-events: none;
+}
+#btnNext {
+  right: -4rem;
+}
+#btnNext:after {
+  content: ">";
+  position: absolute;
+  top: 50%;
+  traNsform: translate(-50%, -50%); 
+  left: 50%; 
+}
+#btnPrev {
+  left: -4rem;
+}
+#btnPrev:after {
+  content: "<";
+  position: absolute;
+  top: 50%;
+  traNsform: translate(-50%, -50%); 
+  left: 50%; 
+}
+.mask {
+  overflow: hidden;
+}
+.slides {
+  white-space: nowrap;  
+  transition: transform 0.3s ease-in;
+}
+.slide {
+  background-color: #eee;
+  width: 200px;
+  height: 200px;
+  display: table-cell;
+  overflow: hidden;
+  visibility: visible;
+  white-space: normal;
+}
+.slide[aria-hidden="true"] {
+  visibility: hidden;  
+  transition: visibility 1ms linear 0.3s;  
+}
+.slide > a {
+  display: block;
+  text-decoration: none;
+  filter: grayscale(60%);
+}
+.slide > a:hover {
+  position: relative;
+  filter: grayscale(0);
+}
+/*
+.slide > a:focus:after {
+  position: absolute;
+  content: "";
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: solid 8px #009bff;
+}
+*/
+li {
+  list-style-position: outside;
+  margin-left: 1rem;
+  line-height: 2;
+}

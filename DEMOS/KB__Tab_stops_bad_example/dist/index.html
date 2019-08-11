@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Inaccessible Cards + load more</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<main>
+<h1>Inaccessible cards (redundant tab stops)</h1>
+<ul id="cards">
+  <li tabindex="0">
+    <div class="card">
+      <a href="google.com" class="img-link">
+        <img src="https://www.telegraph.co.uk/content/dam/news/2017/11/22/TELEMMGLPICT000147365976_trans_NvBQzQNjv4Bq3XmyF3YIL3K1caQxZsZv2Ssm-UOV8_Q90I8_c5Af0yY.jpeg?imwidth=1400" alt="contact with a stupid tie">
+      </a>
+      <h2>
+        <a href="www.google.com">Donald 1</a>   
+      </h2>
+      <div class="desc">
+        Contact is a very nice person we like to help his fellow friends achieve their goals
+      </div>
+      <button class="cfa">read more <span aria-hidden="true">...</span></button>    </div>    
+  </li>
+  <li tabindex="0">
+    <div class="card">
+      <a href="google.com" class="img-link">
+      <img src="https://www.telegraph.co.uk/content/dam/news/2017/11/22/TELEMMGLPICT000147365976_trans_NvBQzQNjv4Bq3XmyF3YIL3K1caQxZsZv2Ssm-UOV8_Q90I8_c5Af0yY.jpeg?imwidth=1400" alt="contact with a stupid tie">
+      </a>
+      <h2>
+        <a href="www.google.com">Donald 2</a>
+      </h2>
+      <div class="desc">
+        Contact is a very nice person we like to help his fellow friends achieve their goals
+      </div>
+      <button class="cfa">read more <span aria-hidden="true">...</span></button>    </div>    
+  </li>
+  <li tabindex="0">
+    <div class="card">
+      <a href="google.com" class="img-link">
+      <img src="https://www.telegraph.co.uk/content/dam/news/2017/11/22/TELEMMGLPICT000147365976_trans_NvBQzQNjv4Bq3XmyF3YIL3K1caQxZsZv2Ssm-UOV8_Q90I8_c5Af0yY.jpeg?imwidth=1400" alt="contact with a stupid tie">
+      </a>
+      <h2>
+        <a href="www.google.com">Donald 3</a>
+      </h2>
+      <div class="desc">
+        Contact is a very nice person we like to help his fellow friends achieve their goals
+      </div>
+      <button class="cfa">read more <span aria-hidden="true">...</span></button>
+    </div>    
+  </li>
+  <li tabindex="0">
+    <div class="card">
+      <a href="google.com" class="img-link">
+      <img src="https://www.telegraph.co.uk/content/dam/news/2017/11/22/TELEMMGLPICT000147365976_trans_NvBQzQNjv4Bq3XmyF3YIL3K1caQxZsZv2Ssm-UOV8_Q90I8_c5Af0yY.jpeg?imwidth=1400" alt="contact with a stupid tie">
+      </a>
+      <h2>
+        <a href="www.google.com">Donald 4</a>
+      </h2>
+      <div class="desc">
+        Contact is a very nice person we like to help his fellow friends achieve their goals
+      </div>
+      <button class="cfa">read more <span aria-hidden="true">...</span></button>
+    </div>    
+  </li>
+</ul>
+<button id="load_more" type="button">Load more cards</button>
+</main>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

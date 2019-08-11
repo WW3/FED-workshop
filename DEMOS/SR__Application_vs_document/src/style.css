@@ -1,0 +1,33 @@
+.intro {
+  padding: 3rem;
+}
+.wrp {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+.card {
+  height: 40vh;
+  line-height: 40vh;
+  width: 40vw;
+  background-color: #eee;
+  position: relative;
+}
+.card:after {
+  background-color: red;
+  color: #fff;
+  content: attr(aria-label);
+  top: 0;
+  right: 0;
+  padding: 0 1rem;
+  position: absolute;
+}
+.card:hover,
+.card:focus {
+  background-color: orangered;
+  color: #fff;
+}
+.card.on {
+  background-color: #000 !important;
+  color: #fff !important;
+}

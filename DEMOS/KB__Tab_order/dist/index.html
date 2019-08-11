@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>accessible tabs</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+    <div class="wrapp">
+        
+        <a href="aria-tabs.html">HOME</a>
+        
+        <h1>TABS DEMO</h1>
+        <section aria-describedby="heading">
+            <h2 id="heading">FULLY ACCESSIBLE TABS</h2>
+            <div class="tabs">
+              <ul role="tablist">
+                <li role="presentation">
+                  <span title="use right and left arrows to navigate between tabs" role="tab" id="tab_signin" aria-selected="true" aria-controls="panel_signin" tabindex="0">Sign in</span>
+                </li>
+                <li role="presentation">
+                  <span title="use right and left arrows to navigate between tabs" role="tab" id="tab_register" aria-selected="false" aria-controls="panel_register" tabindex="-1">Register</span>
+                </li>
+              </ul>
+
+              <div class="panels">
+                <div role="tabpanel" id="panel_signin" aria-hidden="false" aria-labelledby="h_signin">
+                  <h3 id="h_signin">Welcome back, please enter your credentials</h3>
+                  <form id="frm1" method="post" action=".">
+                      <div>
+                          <div class="field">
+                              <label for="username">username:</label>
+                              <input type="email" name="username" id="username" required>
+                          </div>
+                          <div class="field">
+                              <label for="password">password:</label>
+                              <input type="password" name="password" id="password" required>
+                          </div>
+                          <div class="field">
+                              <button type="submit" data-tab-next="#tab_register">SUBMIT</button>
+                          </div>
+                      </div>
+                  </form>
+                </div>
+                <div role="tabpanel" id="panel_register" aria-hidden="true" aria-labelledby="h_register">
+                  <h3 id="h_register">Hi, please join us</h3>
+                  <form id="frm2" method="post" action=".">
+                      <div>
+                          <div class="field">
+                              <label for="firstname">first name:</label>
+                              <input type="text" name="firstname" id="firstname" required>
+                          </div>
+                          <div class="field">
+                              <label for="lastname">last name:</label>
+                              <input type="text" name="lastname" id="lastname" required>
+                          </div>
+                          <div class="field">
+                              <label for="username_2">username:</label>
+                              <input type="email" name="username" id="username_2" required>
+                          </div>
+                          <div class="field">
+                              <label for="password_2">password:</label>
+                              <input type="password" name="password" id="password_2" required>
+                          </div>
+                          <div class="field">
+                              <button type="submit">SUBMIT</button>
+                          </div>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+        </section>
+        <section aria-describedby="h_more">
+            <h2 id="h_more">OTHER CONTENT</h2>
+            <p>
+                Making up for a remarkably mild winter, the first major snowstorm of the season charged up the East Coast on Saturday, a blizzard propelled by tropical-storm-force winds that brought much of the Northeast to a standstill and left more than two feet of snow in New York City, where Mayor Bill de Blasio called it “very likely one of the worst snowstorms in our history.”                
+               <a href="#">read more on winter conditions</a>
+            </p>
+            
+        </section>
+    </div>
+<!-- partial -->
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>

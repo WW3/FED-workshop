@@ -1,0 +1,76 @@
+		* {
+			box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+		}
+        ul {list-style: none;}
+        li {display: inline-block;}
+		.wrapp {
+			max-width: 70rem;
+			margin: 2rem auto;
+		}
+        section + section {
+            margin-top: 2rem;
+        }
+        h1,h2,h3 {line-height: 2;}
+        
+        
+        .tabs {
+            max-width: 40rem;
+        }
+        .tabs [role=tab] {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            cursor: pointer;
+            outline: 0;
+            border: solid 2px #ddd;
+            font-size: 1.1rem;
+        }
+        .tabs [role=tab][aria-selected=false][tabindex="-1"] {
+          background: #eee;
+          text-decoration: none;
+        }
+        .tabs [role=tab][aria-selected=true][tabindex="0"] {
+          text-decoration: underline;
+          border: solid 2px #000;
+        }
+        .panels {
+          margin-top: 4px;
+        }
+        .tabs [role=tabpanel][aria-hidden=true] {
+          display: none;
+        }
+        .tabs [role=tabpanel][aria-hidden=false] {
+          display: block;
+          border: solid 1px #000;
+          padding: 0.75rem;
+          min-height: 40vh;
+        }
+        
+        a:hover, 
+        a:focus {
+            background: #000;
+            color: #fff;
+        }
+        
+        .field {
+            padding: 1rem;
+        }
+        label {display: block;}
+        input, button {
+            width: 100%; 
+            padding: 0.5rem 1rem;
+            border: solid 1px #777;
+        }
+        button {
+            background-color: rgba(2, 70, 198, 0.9);
+            color: #fff;
+            padding: 0.5rem;
+            font-size: 1.1rem;
+            border: none;
+        }
+        button:hover,
+        button:focus {
+            background-color: rgba(2, 70, 198, 1.0);
+            outline: 0;
+        }

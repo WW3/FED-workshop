@@ -1,0 +1,116 @@
+* {
+  outline: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;  
+}
+body {
+  background-color: #777;
+  padding: 4.5rem;
+}
+main {
+  padding: 1.5rem;
+  background-color: #fff;
+}
+h1 {
+  text-align: center;
+}
+#cards {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card {
+  background-color: transparent;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1px 3px #eee;
+  display: flex;
+  flex-flow: column wrap;
+  margin: 2rem auto;
+  overflow: hidden;
+  padding-bottom: 4rem; 
+  position: relative;
+  width: 400px;
+}
+.card:after {
+  background-color: blue;
+  border: solid 1px blue;
+  border-radius: 1rem;
+  bottom: 1rem;
+  color: white;
+  content: " read more... ";
+  display: inline-block;
+  left: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  right: auto;
+  position: absolute;
+  transition: background-color 0.3s ease-in-out;
+}
+.card:focus-within:after,
+.card:hover:after {
+  background-color: navy;
+  border-color: navy;
+}
+img {
+  max-width: 100%;
+  width: 100%;
+}
+h2, .desc {
+  padding: 0.5rem 1.5rem;
+}
+.desc {
+  line-height: 1.75;
+}
+a:link, a:visited {
+  color: blue;
+  transition: color 0.3 ease-in-out;
+}
+a:hover, a:focus {
+  color: navy;
+}
+a[href]:after {
+  content: "";
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 0 0 #ddd; 
+  transition: box-shadow 0.3s ease-in-out;
+}
+a[href]:hover:after,
+a[href]:focus:after {
+  box-shadow: 2px 4px 4px 1px #ddd;
+  transition: box-shadow 0.3s ease-in-out;
+  z-index: 1;
+}
+button {
+  background-color: #fff;
+  border: solid 1px blue;
+  border-radius: 1.75rem;
+  color: blue;
+  display: block;
+  margin: 1rem auto;
+  padding: 1rem;
+}
+button:focus {
+  color: #fff;
+  background-color: navy;
+  border-color: navy;
+}

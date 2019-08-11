@@ -1,0 +1,56 @@
+#visual-notifs {
+  position: absolute;
+  height: 10vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 10vh;
+}
+#visual-notifs > div {
+  backface-visibility: hidden;
+  background: #0ba249;
+  border-bottom: solid 4px #000;
+  color: transparent;
+  text-align: center;
+  font-size: 2rem;
+  height: 0;
+  transition: color 0.25s, height 0.3s 0.25s;
+}
+#visual-notifs > div.on {
+  color: #fff;
+  height: 10vh;
+  line-height: 10vh;
+}
+h1 {
+  line-height: 3;
+  text-align: center;
+}
+.sr-only {
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); 
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    border:0 !important;
+    height: 1px !important;
+    width: 1px !important;
+    overflow: hidden;  
+}
+.wrp {
+  margin-top: 20vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+}
+.rem {
+  text-align:center;
+}
+button {
+  background-color: #ddd;
+  padding: 1rem;
+}
+button:focus,
+button:hover {
+  background-color: #fff;
+  border-color: currentcolor;
+  color: #000;
+}
